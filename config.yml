@@ -1,0 +1,117 @@
+kafka:
+  bootstrap_servers:
+    - "kafka101.dm.migu.cn:9092"
+    - "kafka102.dm.migu.cn:9092"
+    - "kafka103.dm.migu.cn:9092"
+    - "kafka104.dm.migu.cn:9092"
+    - "kafka105.dm.migu.cn:9092"
+    - "kafka106.dm.migu.cn:9092"
+    - "kafka107.dm.migu.cn:9092"
+  topic: "video-search-recomm-poms-content"
+  # Use a Python/test group
+  group_id: "poms-140-type1-multimode-test-20260615"
+  api_version: "2.0.0"
+  auto_offset_reset: "earliest"
+  enable_auto_commit: false
+  idle_log_interval_seconds: 30.0
+  log_each_message: false
+  log_skipped_messages: false
+  poll_timeout_seconds: 1.0
+  progress_log_interval_records: 10000
+  progress_log_interval_seconds: 60.0
+  stop_after_idle_seconds: 0.0
+  max_poll_records: 500
+
+
+operations:
+  release:
+    - "release"
+    - "released"
+    - "publish"
+    - "online"
+    - "up"
+  withdraw:
+    - "withdraw"
+    - "offline"
+    - "down"
+    - "delete"
+    - "deleted"
+
+
+message_filter:
+
+
+  # as a Kafka message field filter.
+  type: "140"
+
+
+hbase:
+  #  through the HBase Thrift service.
+  # These hosts follow example_hbase_client.py. Replace them if your
+  # deployment has a different HBase Thrift service.
+  thrift_hosts:
+    - "h1003.dm.migu.cn"
+    - "h1004.dm.migu.cn"
+    - "h1005.dm.migu.cn"
+    - "h1006.dm.migu.cn"
+    - "h1007.dm.migu.cn"
+    - "h1008.dm.migu.cn"
+    - "h1009.dm.migu.cn"
+    - "h1010.dm.migu.cn"
+    - "h1011.dm.migu.cn"
+    - "h1012.dm.migu.cn"
+  thrift_port: 9090
+  timeout_ms: 30000
+  column_family: "cf"
+  batch_size: 100
+
+
+tables: #需要先创建，写个新的名字；
+
+
+  poms_type140_embedding: "recommend:video_search_recomm_poms_type1_embedding_multimode"
+
+
+  # Legacy chart table names. These are kept only for the old chart/chart_content path.
+  # This follows the Java code:
+  # tableName present -> *_test table, tableName absent -> prod table.
+  use_test_when_table_name_present: true
+  description_prod: "recommend:video_list_description_base"
+  description_test: "recommend:video_list_description_base_test"
+  content_prod: "recommend:video_list_content_base"
+  content_test: "recommend:video_list_content_base_test"
+
+
+content_index:
+  # Enable this only if you want Python to remember chart_id -> content row keys
+  # so future withdraw messages can mark old content rows offline without ES.
+  enabled: false
+  table: ""
+  row_prefix: "__chart_index__"
+  column: "content_row_keys"
+
+
+one_shot:
+  # Optional settings for:
+  # python kafka_to_hbase.py -c config.yml --count 5 --inspect-fields
+  # vector is stored as the original Base64 string, but decoded length is validated before writing.
+  mode: "poms_type140"
+  write_table: "recommend:video_search_recomm_poms_type1_embedding_multimode"
+  row_key_field: "assetId"
+  vector_list_type: "1"
+  fields:
+    - "id"
+    - "assetId"
+    - "version"
+    - "time"
+    - "modelName"
+    - "source"
+    - "summary"
+    - "type"
+    - "vector"
+    - "vectorDimension"
+    - "vectorVersion"
+
+
+logging:
+  level: "INFO"

@@ -1,0 +1,41 @@
+运算元素名	执行ID	运行参数	执行时间	运行时长	状态	运行日志	操作
+hbase_table_stats
+297700456
+2026-08-04 15:48:18
+0h-0m-13s
+ 成功
+hbase_table_stats
+297700347
+2026-08-04 15:46:33
+0h-0m-4s
+ 失败
+Do not has source.origin parameter
+------------------------------------------------------------------------------------------------------------------
+Password: 
+dirname: invalid option -- 'b'
+Try 'dirname --help' for more information.
+default principal: panglinzhuo
+	renew until 08/11/2026 15:48:20
+NowTime: 2026-08-04 15:48:21, Ticket ExpiredTime: 2026-08-05 15:48:20, hello!
+-cur_pid=91660
+-host: cq-bbjf-swan-174-22
+-tag: 10.194.154.148
+        inet 10.194.154.148  netmask 255.255.255.0  broadcast 10.194.154.255
+-proxy user: panglinzhuo
+-log path: /data/nfs/log/20260804/-1_263145_297700456_1785829698.log
+-command: cp /data/nfs/scripts/54/panglinzhuo/hbase_table_stats.py /bigdata/panglinzhuo/http_service_2 && cd /bigdata/panglinzhuo/http_service_2 && /bigdata/zhangcong_yy/python3/bin/python3 hbase_table_stats.py -c config.yml --output hbase_stats_result.txt
+-host: cq-bbjf-swan-174-22
+-proxy user: panglinzhuo
+Connected to HBase thrift h1003.dm.migu.cn:9090
+Scanning table=recommend:video_search_recomm_poms_type1_embedding_multimode column_family=cf limit=ALL ...
+Progress: rows=10000 elapsed=3.0s rate=3383.9 rows/s
+Progress: rows=20000 elapsed=5.3s rate=3751.3 rows/s
+Progress: rows=30000 elapsed=7.5s rate=4008.1 rows/s
+Wrote JSON summary to hbase_stats_result.txt
+table=recommend:video_search_recomm_poms_type1_embedding_multimode
+row_count=31410
+empty_row_count=0
+elapsed_seconds=7.823
+unique_column_count=13
+scan_truncated=False
+exit code: 0

@@ -1,0 +1,153 @@
+
+运算元素名	执行ID	运行参数	执行时间	运行时长	状态	运行日志	操作
+hbase_es_lookup_one
+297654694
+2026-08-04 10:31:45
+0h-1m-22s
+ 成功
+Do not has source.origin parameter
+------------------------------------------------------------------------------------------------------------------
+Password: 
+dirname: invalid option -- 'b'
+Try 'dirname --help' for more information.
+default principal: panglinzhuo
+	renew until 08/11/2026 10:31:47
+NowTime: 2026-08-04 10:31:47, Ticket ExpiredTime: 2026-08-05 10:31:47, hello!
+-cur_pid=153397
+-host: cq-bbjf-swan-174-22
+-tag: 10.194.154.148
+        inet 10.194.154.148  netmask 255.255.255.0  broadcast 10.194.154.255
+-proxy user: panglinzhuo
+-log path: /data/nfs/log/20260804/-1_263115_297654694_1785810705.log
+-command: cd /bigdata/panglinzhuo/http_service_2 && /bigdata/zhangcong_yy/python3/bin/python3 hbase_asset_es_lookup_one.py --output hbase_es_lookup_one_plz.txt
+-host: cq-bbjf-swan-174-22
+-proxy user: panglinzhuo
+Connected to HBase thrift h1003.dm.migu.cn:9090
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+=== HBase row ===
+hbase_table=recommend:video_search_recomm_poms_type1_embedding_multimode
+hbase_row_key=1014236373
+assetId=1014236373
+hbase_columns=assetId
+
+
+=== ES search ===
+index=video_poms_ondemand_content_detail
+total=1 returned=1
+
+
+--- ES hit 1 ---
+_id=746769297 _score=14.780109
+program_id=746769297
+assert_id=1014236373
+product_info_package_id=1
+top_level_fields=access_platform_type,account_type,assert_id,asset_type,assist,author,category,content_form,content_id,content_identity,copy_right,copy_right_type,copyright_id,copyright_object_id,cpid,create_time,detail,duration,exclusive,first_publish,first_published_time,form_type,is_processed,is_published,is_sub_album,keywords,keywords_obj,level1_code,level1_name,modify_time,mpid,name,offline_flg,operate_time,package_id,product_info_package_id,production_pattern,production_platform,program_id,property_file_lists,publish_time,recomm_tag,second_class,second_tag_list,source,source_code,staff_list,third_tag,third_tag_list,time,version
+field_path_count=51
+=== ES source field paths ===
+access_platform_type (str)
+account_type (str)
+assert_id (str)
+asset_type (str)
+assist (str)
+author (str)
+category (str)
+content_form (str)
+content_id (str)
+content_identity (str)
+copy_right (str)
+copy_right_type (str)
+copyright_id (str)
+copyright_object_id (str)
+cpid (str)
+create_time (str)
+detail (str)
+duration (str)
+exclusive (str)
+first_publish (str)
+first_published_time (str)
+form_type (str)
+is_processed (str)
+is_published (str)
+is_sub_album (str)
+keywords (str)
+keywords_obj (str)
+level1_code (str)
+level1_name (str)
+modify_time (str)
+mpid (str)
+name (str)
+offline_flg (str)
+operate_time (str)
+package_id (str)
+product_info_package_id (str)
+production_pattern (str)
+production_platform (str)
+program_id (str)
+property_file_lists (str)
+publish_time (str)
+recomm_tag (str)
+second_class (str)
+second_tag_list (str)
+source (str)
+source_code (str)
+staff_list (str)
+third_tag (str)
+third_tag_list (str)
+time (str)
+version (str)
+=== ES source JSON ===
+{
+  "access_platform_type": "302",
+  "account_type": "null",
+  "assert_id": "1014236373",
+  "asset_type": "资讯",
+  "assist": "UGC",
+  "author": "1497470133",
+  "category": "1",
+  "content_form": "资讯",
+  "content_id": "1707496607",
+  "content_identity": "0",
+  "copy_right": "{\"CopyRightObjectID\":\"990000000\",\"N_CPID\":\"800033\",\"Name\":\"800033资讯免责声明\",\"BeginDate\":\"2016-04-01 00:00:00\",\"EndDate\":\"2099-12-31 23:59:59\",\"Area\":\"6\",\"Terminal\":\"1\",\"Scarcity\":\"3\",\"Way\":\"3\",\"Publish\":\"1\",\"Output\":\"0\",\"FeeType\":\"4\",\"authorizationWay\":\"2\",\"Optimal\":\"1\",\"Scope\":\"2\",\"miguUsePlatformNo\":\"1\",\"NeedDRM\":\"1\"}",
+  "copy_right_type": "2",
+  "copyright_id": "0000000000000000",
+  "copyright_object_id": "990000000",
+  "cpid": "800033",
+  "create_time": "2026-06-09T14:44:12.000Z",
+  "detail": "盘点直播爆笑场面，三国曹操直播打仗，等着老铁刷礼物呢，奥利给",
+  "duration": "631",
+  "exclusive": "0",
+  "first_publish": "2022-09-26T06:19:24.000Z",
+  "first_published_time": "2022-09-26 06:19:19",
+  "form_type": "8",
+  "is_processed": "1",
+  "is_published": "1",
+  "is_sub_album": "0",
+  "keywords": "搞笑",
+  "keywords_obj": "{\"keyword\":[{\"keywordName\":\"搞笑\",\"primaryKey\":\"1\"}]}",
+  "level1_code": "500424",
+  "level1_name": "搞笑",
+  "modify_time": "2026-06-09T16:06:21.000Z",
+  "mpid": "500424",
+  "name": "盘点直播爆笑场面，三国曹操直播打仗，等着老铁刷礼物呢，奥利给",
+  "offline_flg": "1",
+  "operate_time": "2026-06-09T16:06:22.068Z",
+  "package_id": "1002781",
+  "product_info_package_id": "1",
+  "production_pattern": "内容运营",
+  "production_platform": "G客平台",
+  "program_id": "746769297",
+  "property_file_lists": "{\"propertyFile\":[{\"propertyKey\":\"内容形态\",\"propertyValue\":\"资讯\"},{\"propertyKey\":\"字幕语言\",\"propertyValue\":\"简体中文\"},{\"propertyKey\":\"视频语言\",\"propertyValue\":\"国语\"},{\"propertyKey\":\"语言\",\"propertyValue\":\"国语\"},{\"propertyKey\":\"来源\",\"propertyValue\":\"PUGC-www端\"},{\"propertyKey\":\"合同编号\",\"propertyValue\":\"暂无\"}]}",
+  "publish_time": "2026-06-09T16:06:21.000Z",
+  "recomm_tag": "搞笑",
+  "second_class": "搞笑短片",
+  "second_tag_list": "{\"SecondTag\":[{\"TagTypeCode\":\"gxdp\",\"TagValue\":\"搞笑短片\"}]}",
+  "source": "PUGC-www端",
+  "source_code": "pugc_www",
+  "staff_list": "{\"staff\":[]}",
+  "third_tag": "综艺互动与花絮,泛娱乐泛生活,综合体育,剪辑混剪,体育,轻松幽默,生活娱乐,无时效,其他泛生活内容,其他综合体育,知识干货",
+  "third_tag_list": "{\"ThirdTag\":[{\"TagTypeCode\":\"300225\",\"TagTypeName\":\"二级内容题材\",\"TagValue\":\"其他泛生活内容,综艺互动与花絮\"},{\"TagTypeCode\":\"300226\",\"TagTypeName\":\"内容二级分类\",\"TagValue\":\"综合体育\"},{\"TagTypeCode\":\"300223\",\"TagTypeName\":\"内容形式\",\"TagValue\":\"剪辑混剪\"},{\"TagTypeCode\":\"300224\",\"TagTypeName\":\"内容领域\",\"TagValue\":\"生活娱乐\"},{\"TagTypeCode\":\"300219\",\"TagTypeName\":\"内容一级分类\",\"TagValue\":\"体育\"},{\"TagTypeCode\":\"300227\",\"TagTypeName\":\"内容三级分类\",\"TagValue\":\"其他综合体育\"},{\"TagTypeCode\":\"300217\",\"TagTypeName\":\"一级内容题材\",\"TagValue\":\"泛娱乐泛生活\"},{\"TagTypeCode\":\"300221\",\"TagTypeName\":\"情感基调\",\"TagValue\":\"轻松幽默\"},{\"TagTypeCode\":\"300222\",\"TagTypeName\":\"核心看点\",\"TagValue\":\"知识干货\"},{\"TagTypeCode\":\"300220\",\"TagTypeName\":\"时效性\",\"TagValue\":\"无时效\"}]}",
+  "time": "2026-06-09T16:06:21.000Z",
+  "version": "1780992381968"
+}
+Wrote report to hbase_es_lookup_one_plz.txt
