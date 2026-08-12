@@ -1,0 +1,173 @@
+# =============================================================================
+# 【配置说明】config.yml（带中文注释的副本，原文件未改动）
+# -----------------------------------------------------------------------------
+# 用途：kafka_to_hbase.py / kafka_to_hbase_v2.py / kafka_type140_stats.py /
+#       verify_type140_hbase_row.py / hbase_table_stats.py（可选）等脚本的运行配置。
+# 与脚本内 DEFAULT_CONFIG 深合并：此处只写需要覆盖的字段。
+#
+# 典型用法：
+#   python kafka_to_hbase.py -c config.yml --full-load
+#   python kafka_type140_stats.py -c config.yml
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# Kafka 消费者配置
+# ---------------------------------------------------------------------------
+kafka:
+  # Broker 地址列表
+  bootstrap_servers:
+    - "kafka101.dm.migu.cn:9092"
+    - "kafka102.dm.migu.cn:9092"
+    - "kafka103.dm.migu.cn:9092"
+    - "kafka104.dm.migu.cn:9092"
+    - "kafka105.dm.migu.cn:9092"
+    - "kafka106.dm.migu.cn:9092"
+    - "kafka107.dm.migu.cn:9092"
+  # POMS 内容向量相关 topic
+  topic: "video-search-recomm-poms-content"
+  # 消费组；换 group_id 会按 auto_offset_reset 重新消费
+  # Use a Python/test group
+  group_id: "poms-140-type1-multimode-test-20260615"
+  # 强制指定 Kafka 协议版本，避免自动探测失败
+  api_version: "2.0.0"
+  # 新 group 无提交位点时从最早开始（全量灌库常用）
+  auto_offset_reset: "earliest"
+  # false = 脚本手动 commit，保证处理完一批再提交
+  enable_auto_commit: false
+  # 空闲等待时每隔多少秒打一条 Waiting 日志
+  idle_log_interval_seconds: 30.0
+  # 全量时建议关闭逐条日志，避免刷屏
+  log_each_message: false
+  log_skipped_messages: false
+  poll_timeout_seconds: 1.0
+  # full-load 进度日志：每 N 条或每 N 秒
+  progress_log_interval_records: 10000
+  progress_log_interval_seconds: 60.0
+  # 0 表示空闲也不自动退出；可用 CLI --stop-after-idle-seconds 覆盖
+  stop_after_idle_seconds: 0.0
+  # 单次 poll 最多拉取条数
+  max_poll_records: 500
+
+
+# ---------------------------------------------------------------------------
+# 榜单类消息的操作别名（仅遗留 chart / chart_content 链路使用）
+# ---------------------------------------------------------------------------
+operations:
+  # 视为「上线/发布」
+  release:
+    - "release"
+    - "released"
+    - "publish"
+    - "online"
+    - "up"
+  # 视为「下线/撤回」
+  withdraw:
+    - "withdraw"
+    - "offline"
+    - "down"
+    - "delete"
+    - "deleted"
+
+
+# ---------------------------------------------------------------------------
+# 消息过滤：只处理外层 type 等于该值的消息
+# ---------------------------------------------------------------------------
+message_filter:
+
+
+  # as a Kafka message field filter.
+  # 生产多模态向量消息 type=140
+  type: "140"
+
+
+# ---------------------------------------------------------------------------
+# HBase Thrift 连接
+# ---------------------------------------------------------------------------
+hbase:
+  #  through the HBase Thrift service.
+  # These hosts follow example_hbase_client.py. Replace them if your
+  # deployment has a different HBase Thrift service.
+  thrift_hosts:
+    - "h1003.dm.migu.cn"
+    - "h1004.dm.migu.cn"
+    - "h1005.dm.migu.cn"
+    - "h1006.dm.migu.cn"
+    - "h1007.dm.migu.cn"
+    - "h1008.dm.migu.cn"
+    - "h1009.dm.migu.cn"
+    - "h1010.dm.migu.cn"
+    - "h1011.dm.migu.cn"
+    - "h1012.dm.migu.cn"
+  thrift_port: 9090
+  timeout_ms: 30000
+  # 列族名；写入列为 cf:<qualifier>
+  column_family: "cf"
+  batch_size: 100
+
+
+# ---------------------------------------------------------------------------
+# HBase 表名
+# ---------------------------------------------------------------------------
+tables: #需要先创建，写个新的名字；
+
+
+  # type=140 多模态向量目标表（namespace:table）
+  poms_type140_embedding: "recommend:video_search_recomm_poms_type1_embedding_multimode"
+
+
+  # Legacy chart table names. These are kept only for the old chart/chart_content path.
+  # This follows the Java code:
+  # tableName present -> *_test table, tableName absent -> prod table.
+  use_test_when_table_name_present: true
+  description_prod: "recommend:video_list_description_base"
+  description_test: "recommend:video_list_description_base_test"
+  content_prod: "recommend:video_list_content_base"
+  content_test: "recommend:video_list_content_base_test"
+
+
+# ---------------------------------------------------------------------------
+# 榜单内容索引（chart_id -> content row keys）；当前关闭
+# ---------------------------------------------------------------------------
+content_index:
+  # Enable this only if you want Python to remember chart_id -> content row keys
+  # so future withdraw messages can mark old content rows offline without ES.
+  enabled: false
+  table: ""
+  row_prefix: "__chart_index__"
+  column: "content_row_keys"
+
+
+# ---------------------------------------------------------------------------
+# one_shot：POMS type=140 按条写入配置
+# ---------------------------------------------------------------------------
+one_shot:
+  # Optional settings for:
+  # python kafka_to_hbase.py -c config.yml --count 5 --inspect-fields
+  # vector is stored as the original Base64 string, but decoded length is validated before writing.
+  # mode: poms_type140（专用映射）或 generic（按字段列表直写）
+  mode: "poms_type140"
+  write_table: "recommend:video_search_recomm_poms_type1_embedding_multimode"
+  # HBase row key 取自该字段（通常等于 data.assetId）
+  row_key_field: "assetId"
+  # 从 data.vectorList 中挑选 type=1 的向量项（多模态）
+  vector_list_type: "1"
+  # 实际写入 HBase 的列（assetId/version 在写入逻辑里会强制保留）
+  fields:
+    - "id"
+    - "assetId"
+    - "version"
+    - "time"
+    - "modelName"
+    - "source"
+    - "summary"
+    - "type"
+    - "vector"
+    - "vectorDimension"
+    - "vectorVersion"
+
+
+# ---------------------------------------------------------------------------
+# 日志级别：DEBUG / INFO / WARNING / ERROR
+# ---------------------------------------------------------------------------
+logging:
+  level: "INFO"

@@ -1,0 +1,273 @@
+
+merge_es_fields_to_hbase
+298368737
+2026-08-07 16:27:25
+0h-0m-54s
+ 成功
+merge_es_fields_to_hbase
+298368446
+2026-08-07 16:24:40
+0h-0m-7s
+ 成功
+merge_es_fields_to_hbase
+298368381
+2026-08-07 16:23:08
+0h-0m-8s
+ 成功
+Do not has source.origin parameter
+------------------------------------------------------------------------------------------------------------------
+Password: 
+dirname: invalid option -- 'b'
+Try 'dirname --help' for more information.
+default principal: panglinzhuo
+	renew until 08/14/2026 16:27:27
+NowTime: 2026-08-07 16:27:27, Ticket ExpiredTime: 2026-08-08 16:27:27, hello!
+-cur_pid=328189
+-host: cq-bbjf-swan-174-22
+-tag: 10.194.154.148
+        inet 10.194.154.148  netmask 255.255.255.0  broadcast 10.194.154.255
+-proxy user: panglinzhuo
+-log path: /data/nfs/log/20260807/-1_263401_298368737_1786091245.log
+-command: cd /bigdata/panglinzhuo/http_service_2 && /bigdata/zhangcong_yy/python3/bin/python3 merge_es_fields_to_hbase.py --merge-fields program_id,first_published_time,modify_time --dry-run --limit 1300000000 --output-csv merge_dryrun.csv && tail -100 merge_dryrun.csv
+-host: cq-bbjf-swan-174-22
+-proxy user: panglinzhuo
+Connected to HBase thrift h1003.dm.migu.cn:9090
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=1 scanned=100 es_matched=0 missing_in_es=100 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=2 scanned=200 es_matched=0 missing_in_es=200 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=3 scanned=300 es_matched=0 missing_in_es=300 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=4 scanned=400 es_matched=1 missing_in_es=399 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=5 scanned=500 es_matched=1 missing_in_es=499 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=6 scanned=600 es_matched=1 missing_in_es=599 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=7 scanned=700 es_matched=6 missing_in_es=694 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=8 scanned=800 es_matched=12 missing_in_es=788 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=9 scanned=900 es_matched=16 missing_in_es=884 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=10 scanned=1000 es_matched=21 missing_in_es=979 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=11 scanned=1100 es_matched=22 missing_in_es=1078 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=12 scanned=1200 es_matched=25 missing_in_es=1175 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=13 scanned=1300 es_matched=34 missing_in_es=1266 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=14 scanned=1400 es_matched=39 missing_in_es=1361 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=15 scanned=1500 es_matched=46 missing_in_es=1454 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=16 scanned=1600 es_matched=52 missing_in_es=1548 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=17 scanned=1700 es_matched=54 missing_in_es=1646 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=18 scanned=1800 es_matched=58 missing_in_es=1742 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=19 scanned=1900 es_matched=66 missing_in_es=1834 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=20 scanned=2000 es_matched=70 missing_in_es=1930 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=21 scanned=2100 es_matched=74 missing_in_es=2026 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=22 scanned=2200 es_matched=76 missing_in_es=2124 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=23 scanned=2300 es_matched=82 missing_in_es=2218 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=24 scanned=2400 es_matched=89 missing_in_es=2311 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=25 scanned=2500 es_matched=91 missing_in_es=2409 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=26 scanned=2600 es_matched=102 missing_in_es=2498 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=27 scanned=2700 es_matched=107 missing_in_es=2593 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=28 scanned=2800 es_matched=111 missing_in_es=2689 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=347 scanned=34700 es_matched=21366 missing_in_es=13334 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=348 scanned=34800 es_matched=21464 missing_in_es=13336 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=349 scanned=34900 es_matched=21561 missing_in_es=13339 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=350 scanned=35000 es_matched=21657 missing_in_es=13343 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=351 scanned=35100 es_matched=21756 missing_in_es=13344 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=352 scanned=35200 es_matched=21853 missing_in_es=13347 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=353 scanned=35300 es_matched=21946 missing_in_es=13354 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=1347 scanned=134700 es_matched=115594 missing_in_es=19106 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=1348 scanned=134800 es_matched=115680 missing_in_es=19120 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=1349 scanned=134900 es_matched=115778 missing_in_es=19122 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=1350 scanned=135000 es_matched=115878 missing_in_es=19122 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=1351 scanned=135100 es_matched=115978 missing_in_es=19122 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=1352 scanned=135200 es_matched=116076 missing_in_es=19124 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=1353 scanned=135300 es_matched=116169 missing_in_es=19131 written=0
+Requesting ES POST /video_poms_ondemand_content_detail/_search via 10.194.9.2:29201
+ES request succeeded via 10.194.9.2:29201
+Processed batch=1354 scanned=135351 es_matched=116206 missing_in_es=19145 written=0
+=== ES -> HBase merge summary ===
+hbase_rows=135351
+es_matched_rows=116206
+missing_in_es=19145
+hbase_rows_written=0
+merge_fields=program_id,first_published_time,modify_time
+Wrote CSV report to merge_dryrun.csv
+5106678639,5106678639,1,dry_run,966585154,2026-08-05 16:54:54,2026-08-06T00:00:00.000Z
+5106678643,5106678643,1,dry_run,966585597,2026-08-05 17:15:21,2026-08-06T00:00:00.000Z
+5106678664,5106678664,1,dry_run,966585727,2026-08-05 17:23:41,2026-08-07T00:00:01.000Z
+5106678841,5106678841,1,dry_run,966591738,2026-08-06 08:55:33,2026-08-07T11:54:43.000Z
+5106678842,5106678842,1,dry_run,966591732,2026-08-06 08:54:39,2026-08-07T11:54:46.000Z
+5106678855,5106678855,1,dry_run,966592122,2026-08-06 09:31:28,2026-08-06T09:34:22.000Z
+5106678883,5106678883,1,dry_run,966593286,2026-08-06 10:18:36,2026-08-06T10:19:24.000Z
+5106681366,5106681366,1,dry_run,966594586,2026-08-06 10:30:59,2026-08-06T16:29:26.000Z
+5106709998,5106709998,1,dry_run,966595681,2026-08-06 10:46:57,2026-08-06T10:55:42.000Z
+5106710020,5106710020,1,dry_run,966596357,2026-08-06 11:08:21,2026-08-06T11:11:24.000Z
+5106710141,5106710141,1,dry_run,966599294,2026-08-06 13:07:46,2026-08-06T13:24:50.000Z
+5106710153,5106710153,1,dry_run,966602137,2026-08-06 14:50:48,2026-08-07T00:00:03.000Z
+5106710981,5106710981,1,dry_run,966605086,2026-08-06 17:45:46,2026-08-07T00:00:04.000Z
+5106711141,5106711141,1,dry_run,966612928,2026-08-07 08:22:03,2026-08-07T11:55:01.000Z
+5106711151,5106711151,0,not_found,,,
+5106711152,5106711152,0,not_found,,,
+5106711159,5106711159,0,not_found,,,
+5106711164,5106711164,0,not_found,,,
+5106711172,5106711172,0,not_found,,,
+5106711360,5106711360,1,dry_run,966615927,2026-08-07 10:42:20,2026-08-07T10:44:06.000Z
+5106711361,5106711361,1,dry_run,966615882,2026-08-07 10:40:44,2026-08-07T10:43:43.000Z
+5106711362,5106711362,1,dry_run,966616019,2026-08-07 10:45:46,2026-08-07T10:47:43.000Z
+5106711369,5106711369,1,dry_run,966616649,2026-08-07 11:08:49,2026-08-07T11:17:23.000Z
+5106711370,5106711370,1,dry_run,966616722,2026-08-07 11:10:46,2026-08-07T11:14:08.000Z
+5106711374,5106711374,1,dry_run,966616839,2026-08-07 11:15:25,2026-08-07T11:26:05.000Z
+5106711375,5106711375,1,dry_run,966616942,2026-08-07 11:17:35,2026-08-07T11:26:04.000Z
+5106711376,5106711376,1,dry_run,966616980,2026-08-07 11:18:43,2026-08-07T14:03:50.000Z
+5106711378,5106711378,1,dry_run,966617123,2026-08-07 11:26:43,2026-08-07T14:42:24.000Z
+5106711379,5106711379,1,dry_run,966617142,2026-08-07 11:27:50,2026-08-07T11:36:22.000Z
+5106711380,5106711380,0,not_found,,,
+5106711381,5106711381,1,dry_run,966619709,2026-08-07 13:15:24,2026-08-07T13:31:50.000Z
+5106711382,5106711382,1,dry_run,966619702,2026-08-07 13:15:10,2026-08-07T13:32:06.000Z
+5106711383,5106711383,1,dry_run,966617233,2026-08-07 11:30:47,2026-08-07T14:42:44.000Z
+5106711384,5106711384,1,dry_run,966619698,2026-08-07 13:15:12,2026-08-07T13:32:08.000Z
+5106711385,5106711385,1,dry_run,966619727,2026-08-07 13:15:25,2026-08-07T13:31:52.000Z
+5106711386,5106711386,1,dry_run,966617334,2026-08-07 11:33:23,2026-08-07T14:42:43.000Z
+5106711387,5106711387,1,dry_run,966619697,2026-08-07 13:15:15,2026-08-07T13:31:50.000Z
+5106711392,5106711392,1,dry_run,966619488,2026-08-07 13:09:50,2026-08-07T13:28:22.000Z
+5106711393,5106711393,1,dry_run,966619611,2026-08-07 13:13:17,2026-08-07T13:28:42.000Z
+5106711394,5106711394,1,dry_run,966619693,2026-08-07 13:15:13,2026-08-07T13:28:43.000Z
+5106711395,5106711395,1,dry_run,966619660,2026-08-07 13:14:02,2026-08-07T13:28:43.000Z
+5106711396,5106711396,1,dry_run,966619539,2026-08-07 13:11:22,2026-08-07T13:48:04.000Z
+5106711397,5106711397,1,dry_run,966619761,2026-08-07 13:16:01,2026-08-07T13:29:50.000Z
+5106711398,5106711398,1,dry_run,966619603,2026-08-07 13:12:43,2026-08-07T13:28:22.000Z
+5106711399,5106711399,1,dry_run,966619347,2026-08-07 13:05:49,2026-08-07T13:28:12.000Z
+5106711400,5106711400,1,dry_run,966619519,2026-08-07 13:10:47,2026-08-07T13:28:22.000Z
+5106711402,5106711402,1,dry_run,966619700,2026-08-07 13:15:15,2026-08-07T13:32:06.000Z
+5106711403,5106711403,1,dry_run,966619724,2026-08-07 13:15:22,2026-08-07T13:31:51.000Z
+5106711404,5106711404,1,dry_run,966619712,2026-08-07 13:15:22,2026-08-07T13:31:52.000Z
+5106711405,5106711405,1,dry_run,966619706,2026-08-07 13:15:16,2026-08-07T13:32:16.000Z
+5106711406,5106711406,1,dry_run,966619964,2026-08-07 13:21:20,2026-08-07T13:39:02.000Z
+5106711407,5106711407,1,dry_run,966619730,2026-08-07 13:15:23,2026-08-07T13:32:18.000Z
+5106711408,5106711408,1,dry_run,966619963,2026-08-07 13:21:36,2026-08-07T13:42:03.000Z
+5106711409,5106711409,1,dry_run,966619990,2026-08-07 13:21:52,2026-08-07T13:42:05.000Z
+5106711410,5106711410,1,dry_run,966620000,2026-08-07 13:22:00,2026-08-07T13:42:05.000Z
+5106711411,5106711411,1,dry_run,966620036,2026-08-07 13:22:51,2026-08-07T13:41:45.000Z
+5106711413,5106711413,1,dry_run,966620024,2026-08-07 13:22:42,2026-08-07T13:42:07.000Z
+5106711414,5106711414,1,dry_run,966620045,2026-08-07 13:23:17,2026-08-07T13:41:43.000Z
+5106711415,5106711415,1,dry_run,966620064,2026-08-07 13:23:32,2026-08-07T13:41:43.000Z
+5106711416,5106711416,0,not_found,,,
+5106711417,5106711417,1,dry_run,966620091,2026-08-07 13:24:11,2026-08-07T13:41:46.000Z
+5106711418,5106711418,1,dry_run,966620194,2026-08-07 13:29:10,2026-08-07T14:43:10.000Z
+5106711419,5106711419,1,dry_run,966620102,2026-08-07 13:24:27,2026-08-07T13:42:24.000Z
+5106711420,5106711420,1,dry_run,966620224,2026-08-07 13:29:42,2026-08-07T14:43:02.000Z
+5106711421,5106711421,0,not_found,,,
+5106711422,5106711422,0,not_found,,,
+5106711424,5106711424,0,not_found,,,
+5106711425,5106711425,0,not_found,,,
+5106711426,5106711426,0,not_found,,,
+5106711427,5106711427,0,not_found,,,
+5106711431,5106711431,1,dry_run,966621771,2026-08-07 14:19:02,2026-08-07T14:27:02.000Z
+5106711432,5106711432,1,dry_run,966621776,2026-08-07 14:19:08,2026-08-07T14:27:09.000Z
+5106711433,5106711433,1,dry_run,966621764,2026-08-07 14:19:06,2026-08-07T14:27:09.000Z
+5106711434,5106711434,1,dry_run,966621762,2026-08-07 14:19:01,2026-08-07T14:27:22.000Z
+5106711435,5106711435,1,dry_run,966621760,2026-08-07 14:19:06,2026-08-07T14:27:03.000Z
+5106711436,5106711436,1,dry_run,966621766,2026-08-07 14:19:05,2026-08-07T14:27:08.000Z
+5106711437,5106711437,1,dry_run,966621750,2026-08-07 14:18:57,2026-08-07T14:27:02.000Z
+5106711439,5106711439,1,dry_run,966621744,2026-08-07 14:18:57,2026-08-07T14:27:02.000Z
+5106711440,5106711440,1,dry_run,966621777,2026-08-07 14:19:04,2026-08-07T14:27:23.000Z
+5106711443,5106711443,0,not_found,,,
+5106711446,5106711446,0,not_found,,,
+5106711447,5106711447,0,not_found,,,
+5106711448,5106711448,0,not_found,,,
+5106711459,5106711459,0,not_found,,,
+5106711462,5106711462,1,dry_run,966621747,2026-08-07 14:18:56,2026-08-07T14:27:04.000Z
+5106711463,5106711463,0,not_found,,,
+5106711464,5106711464,1,dry_run,966621916,2026-08-07 14:25:53,2026-08-07T15:23:03.000Z
+5106711465,5106711465,1,dry_run,966621915,2026-08-07 14:25:51,2026-08-07T15:23:10.000Z
+5106711466,5106711466,1,dry_run,966621921,2026-08-07 14:25:47,2026-08-07T15:23:13.000Z
+5106711467,5106711467,0,not_found,,,
+5106711517,5106711517,1,dry_run,966622399,2026-08-07 14:42:01,2026-08-07T15:47:37.000Z
+5106711518,5106711518,1,dry_run,966622511,2026-08-07 14:48:49,2026-08-07T15:47:23.000Z
+5106711519,5106711519,1,dry_run,966622521,2026-08-07 14:49:25,2026-08-07T15:47:04.000Z
+5106711520,5106711520,1,dry_run,966622531,2026-08-07 14:49:47,2026-08-07T15:46:53.000Z
+5106711521,5106711521,1,dry_run,966622538,2026-08-07 14:50:15,2026-08-07T15:46:24.000Z
+5106711522,5106711522,1,dry_run,966622560,2026-08-07 14:51:22,2026-08-07T15:46:24.000Z
+5106711524,5106711524,1,dry_run,966622548,2026-08-07 14:50:29,2026-08-07T15:46:02.000Z
+5106711525,5106711525,1,dry_run,966622553,2026-08-07 14:50:46,2026-08-07T15:45:43.000Z
+5106711526,5106711526,1,dry_run,966622557,2026-08-07 14:51:05,2026-08-07T15:45:22.000Z
+5106711527,5106711527,1,dry_run,966622565,2026-08-07 14:51:26,2026-08-07T15:08:42.000Z
+exit code: 0
+共 3 条
+25条/页
